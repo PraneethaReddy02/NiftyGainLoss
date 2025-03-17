@@ -5,7 +5,9 @@ required_packages <- c("shiny", "quantmod", "xts")
 
 # Install any missing packages
 new_packages <- required_packages[!(required_packages %in% installed.packages()[, "Package"])]
-if(length(new_packages)) install.packages(new_packages)
+if (length(new_packages)) {
+  install.packages(new_packages)
+}
 
 # Load the required packages
 lapply(required_packages, library, character.only = TRUE)
